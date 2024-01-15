@@ -1,0 +1,97 @@
+.header {
+  background-color: #f1f1f1;
+  display: flex;/*блочное поведение придаем есть еще строчное*/
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px 100px;
+}
+/*настройка headera*/
+
+.header-con{
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  padding: 20px;
+}
+/*нужен ли контайнер*/
+
+.logotype{
+    font-size: 28px;
+    color:#FC552F;
+}
+
+.list-nav-elem{
+    color: #6E727E;
+    font-size: 18px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;/*убрать подчеркивание ссылки*/
+    margin-bottom: 14px;
+}
+
+.big-text{
+text-indent: 20px;
+}
+
+.title-text{
+    text-align: center;
+}
+
+aside {
+    background-color: #f1f1f1;
+    width: auto;
+    padding: 10px;
+    position: fixed;
+    overflow: auto;
+}
+
+.footer {
+    background-color: #f1f1f1;
+}
+.footer-text{
+    text-align: center;
+}
+
+section {
+    margin-left: 250px;
+    padding: 10px;
+}
+
+.slider-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}

@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <link rel = "stylesheet" href = '{% static "deps/style.css" %}'>
+    <link rel="icon" type="image/png" sizes="32x32" href='{% static "deps/favicon-32x32.png" %}'>
+    <link rel="manifest" href='{% static "deps/site.webmanifest" %}'>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header class = "header">
+        <div><img src='{% static "deps/favicon-32x32.png" %}'></div>
+        <div class = "logotype">1С - Data analytics</div>
+      </header>
+    <main>
+        <aside>
+            <nav><!--навигация везде переход на главнубю страницу-->
+            <ul class = "list-nav">
+                <li><a href='{% url "index" %}' class = "list-nav-elem">Главная</a></li><!--главная-->
+                <li><a href='{% url "vostreb" %}' class = "list-nav-elem">Востребованность</a></li>
+                <li><a href='{% url "skills" %}' class = "list-nav-elem">Навыки</a></li>
+                <li><a href='{% url "georgraph" %}'  class = "list-nav-elem">География</a></li>
+                <li><a href='{% url "last_vac" %}'  class = "list-nav-elem">Последние вакансии</a></li>
+            </ul>
+            </nav>
+        </aside>
+        <section>
+          {% block info %} {% endblock %}
+        </section>
+    </main>
+    <footer class="footer">
+        <p class = "footer-text">Ковальский Антон Павлович РИ-220936 АТ-02</p>
+        <!-- Здесь будет ваш подвал -->
+    </footer>
+    <!-- Подключаем ваш JavaScript файл -->
+    <script src='{% static "deps/scripts-main.js" %}'></script>
+</body>
+</html>
