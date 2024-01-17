@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from DataForSite.lastvacancieHHAPi import get_lact_vac
+from .models import VostrebContent
 def index(request):
     context = {
         'title': "Home",
@@ -28,8 +29,10 @@ def last_vac(request):
     return render(request, 'main/last_vac.html', context)
     #return HttpResponse("Home page")
 def georgraph(request):
+    result = VostrebContent.objects.all()
     context = {
         'title': "georgraph",
+        'result': result
     }
     return render(request, 'main/georgraph.html', context)
     #return HttpResponse("Home page")

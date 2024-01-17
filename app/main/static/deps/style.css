@@ -95,3 +95,12 @@ section {
 .next-button {
   right: 10px;
 }
+
+.page-image{
+    width: 500px;
+}
+
+.div-center{
+  display: flex;
+  justify-content: center;
+}
