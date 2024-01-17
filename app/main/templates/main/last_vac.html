@@ -3,7 +3,20 @@
 {% load static %}
 
 {% block info %}
-
-<p>последние вакансии</p>>
-
+<ul>
+    <li><h1>Список вакансий</h1></li>
+</ul>
+<ol>
+    {% for vacancy in vacancies %}
+        <li>
+            <h2>{{ vacancy.name }}</h2>
+            <p>{{ vacancy.description }}</p>
+            <p>Навыки: {{ vacancy.skills }}</p>
+            <p>Компания: {{ vacancy.company }}<p>
+            <p>Оклад: {{ vacancy.salary.from }} {{ vacancy.salary.to }} {{ vacancy.salary.currency }}</p>
+            <p>Название региона: {{ vacancy.region_name }}</p>
+            <p>Дата публикации вакансии: {{ vacancy.published_at }}</p>
+        </li>
+    {% endfor %}
+</ol>
 {% endblock %}
