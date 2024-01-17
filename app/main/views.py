@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from DataForSite.lastvacancieHHAPi import get_lact_vac
 def index(request):
     context = {
         'title': "Home",
@@ -23,6 +23,7 @@ def skills(request):
 def last_vac(request):
     context = {
         'title': "last_vac",
+        'vacancies': get_lact_vac()
     }
     return render(request, 'main/last_vac.html', context)
     #return HttpResponse("Home page")
