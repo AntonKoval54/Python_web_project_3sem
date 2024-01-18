@@ -4,6 +4,9 @@
 
 {% block info %}
 
-<p>востреб</p>>
+<p>востреб</p>
+{% for elem in result %}
+        {{ elem.content| safe  }}
+{% endfor %}
 
 {% endblock %}
